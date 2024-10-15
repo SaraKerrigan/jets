@@ -1,0 +1,484 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.0/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./styles/index.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__top">
+      <div class="wrapper header__top-wrapper">
+        <nav class="header__top-nav">
+          <a class="header__top-nav-link" href="">Магазины</a>
+          <a class="header__top-nav-link" href="">Акции</a>
+          <a class="header__top-nav-link" href="">Доставка и оплата</a>
+        </nav>
+        <a class="header__top-logo" href="index.html"><img class="header__top-logo-img" src="assets/icons/spidometr.svg"
+            alt="" /></a>
+        <p class="header__top-adress">Москва, ул. Науки 25</p>
+        <nav class="header__top-menu">
+          <a class="header__top-menu-link" href=""><img src="assets/icons/header-heart.svg" alt="" /></a>
+          <a class="header__top-menu-link" href=""><img src="assets/icons/header-man.svg" alt="" /></a>
+          <a class="header__top-menu-link" href=""><img src="assets/icons/header-basket.svg" alt="" /><span
+              class="header__top-menu-span">1</span></a>
+        </nav>
+      </div>
+    </div>
+    <div class="header__bottom">
+      <div class="wrapper header__bottom-wrapper">
+        <nav class="header__bottom-menu">
+          <a class="bottom-menu-link" href="">Квадроциклы</a>
+          <a class="bottom-menu-link" href="">Катера</a>
+          <a class="bottom-menu-link" href="catalog.html">Гидроциклы</a>
+          <a class="bottom-menu-link" href="">Лодки</a>
+          <a class="bottom-menu-link" href="">Вездеходы</a>
+          <a class="bottom-menu-link" href="">Снегоходы</a>
+          <a class="bottom-menu-link" href="">Двигатели</a>
+          <a class="bottom-menu-link" href="">Запчасти</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <main>
+
+
+    <section class="catalog-section">
+      <div class="wrapper catalog-section__wrapper">
+        <div class="breadcrumbs">
+          <a class="breadcrumbs__link" href="">Главная</a>
+          <a class="breadcrumbs__link" href="">Гидроциклы</a>
+        </div>
+        <div class="catalog-section__content">
+          <div class="catalog-section__menu">
+            <div class="catalog-section__menu-title">
+              <button class="catalog-section__menu-title-btn active">Параметры</button>
+              <button class="catalog-section__menu-title-btn">по марке</button>
+            </div>
+            <div class="accordeon catalog-section__accordeon">
+              <label class="accordeon__header" for="accordeon1">
+                <img class="accordeon__shevron" src="assets/icons/catalog-arrow-up.svg" alt="">
+                <h3 class="accordeon__heading">Наличие</h3>
+              </label>
+              <input class="accordeon__switcher" type="checkbox" id="accordeon1">
+              <div class="accordeon__body accordeon__body-grid">
+                <label class="accordeon__label">
+                  <input class="accordeon__toggler" type="checkbox">
+                  <div class="chekbox"></div>
+                  В наличии
+                </label>
+                <label class="accordeon__label">
+                  <input class="accordeon__toggler" type="checkbox">
+                  <div class="chekbox"></div>
+                  Под заказ
+                </label>
+              </div>
+            </div>
+            <div class="accordeon">
+              <label class="accordeon__header" for="accordeon2">
+                <img class="accordeon__shevron" src="assets/icons/catalog-arrow-up.svg" alt="">
+                <h3 class="accordeon__heading">Новинки</h3>
+              </label>
+              <input class="accordeon__switcher" type="checkbox" id="accordeon2">
+              <div class="accordeon__body accordeon__body-innovations">
+                <label class="accordeon__label">
+                  <input class="accordeon__toggler" type="checkbox">
+                  <div class="chekbox"></div>
+                  Все
+                </label>
+                <label class="accordeon__label">
+                  <input class="accordeon__toggler" type="checkbox">
+                  <div class="chekbox"></div>
+                  Новинки
+                </label>
+                <label class="accordeon__label">
+                  <input class="accordeon__toggler" type="checkbox">
+                  <div class="chekbox"></div>
+                  Акции
+                </label>
+              </div>
+            </div>
+            <div class="accordeon">
+              <label class="accordeon__header" for="accordeon3">
+                <img class="accordeon__shevron" src="assets/icons/catalog-arrow-up.svg" alt="">
+                <h3 class="accordeon__heading">Цена</h3>
+              </label>
+              <input class="accordeon__switcher" type="checkbox" id="accordeon3">
+              <div class="accordeon__body accordeon__body-slider">
+                <div class="slider__box">
+                  <div id="slider__box-price"></div>
+                </div>
+                <div class="accordeon__prices">
+                  <div class="accordeon__prices-item">
+                    <p class="accordeon__prices-item-text">От</p>
+                    <a class="accordeon__prices-item-numbers" href="">100 000</a>
+                  </div>
+                  <div class="accordeon__prices-item">
+                    <p class="accordeon__prices-item-text">До</p>
+                    <a class="accordeon__prices-item-numbers" href="">500 000</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row-list">
+              <div class="row">
+                <h4 class="row__heading">Мощность, л.с.</h4>
+                <div class="row__select">
+                  <label class="row__select-header" for="row1">
+                    <p class="row__current-value">90</p>
+                    <img class="row__shevron" src="assets/icons/catalog-arrow-up.svg" alt="">
+                  </label>
+                  <input class="row__switcher" type="checkbox" id="row1">
+                  <div class="row__select-body">
+                    <ul class="row__select-list">
+                      <li class="row__select-item">90</li>
+                      <li class="row__select-item">130</li>
+                      <li class="row__select-item">154</li>
+                      <li class="row__select-item">230</li>
+                      <li class="row__select-item">300</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <h4 class="row__heading">Мощность двигателя, л.с.</h4>
+                <div class="row__select">
+                  <label class="row__select-header" for="row2">
+                    <p class="row__current-value">90</p>
+                    <img class="row__shevron" src="assets/icons/catalog-arrow-up.svg" alt="">
+                  </label>
+                  <input class="row__switcher" type="checkbox" id="row2">
+                  <div class="row__select-body">
+                    <ul class="row__select-list">
+                      <li class="row__select-item">90</li>
+                      <li class="row__select-item">130</li>
+                      <li class="row__select-item">154</li>
+                      <li class="row__select-item">230</li>
+                      <li class="row__select-item">300</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <h4 class="row__heading">Макс. скорость</h4>
+                <div class="row__select">
+                  <label class="row__select-header" for="row3">
+                    <p class="row__current-value">90</p>
+                    <img class="row__shevron" src="assets/icons/catalog-arrow-up.svg" alt="">
+                  </label>
+                  <input class="row__switcher" type="checkbox" id="row3">
+                  <div class="row__select-body">
+                    <ul class="row__select-list">
+                      <li class="row__select-item">90</li>
+                      <li class="row__select-item">130</li>
+                      <li class="row__select-item">154</li>
+                      <li class="row__select-item">230</li>
+                      <li class="row__select-item">300</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordeon">
+              <label class="accordeon__header" for="accordeon4">
+                <img class="accordeon__shevron" src="assets/icons/catalog-arrow-up.svg" alt="">
+                <h3 class="accordeon__heading">Бренд</h3>
+              </label>
+              <input class="accordeon__switcher" type="checkbox" id="accordeon4">
+              <div class="accordeon__body accordeon__body-models">
+                <div class="accordeon__body-grid-3">
+                  <label class="accordeon__label">
+                    <input class="accordeon__toggler" type="checkbox">
+                    <div class="chekbox"></div>
+                    BRP
+                  </label>
+                  <label class="accordeon__label">
+                    <input class="accordeon__toggler" type="checkbox">
+                    <div class="chekbox"></div>
+                    Spark 2
+                  </label>
+                  <label class="accordeon__label">
+                    <input class="accordeon__toggler" type="checkbox">
+                    <div class="chekbox"></div>
+                    Spark 3
+                  </label>
+                </div>
+                <a class="accordeon__link" href="">Показать еще</a>
+              </div>
+            </div>
+
+            <div class="accordeon">
+              <label class="accordeon__header" for="accordeon7">
+                <img class="accordeon__shevron" src="assets/icons/catalog-arrow-up.svg" alt="">
+                <h3 class="accordeon__heading">Модель</h3>
+              </label>
+
+              <input class="accordeon__switcher" type="checkbox" id="accordeon7">
+
+              <div class="accordeon__body ">
+                <input class="accordeon__input-model" type="text" placeholder="Введите модель">
+                <div class="accordeon__body-grid-4">
+                  <label class="accordeon__label">
+                    <input class="accordeon__toggler" type="checkbox">
+                    <div class="chekbox"></div>
+                    Sea-doo Spark 2
+                  </label>
+                  <label class="accordeon__label">
+                    <input class="accordeon__toggler" type="checkbox">
+                    <div class="chekbox"></div>
+                    SeaDoo Spark 90
+                  </label>
+                  <label class="accordeon__label">
+                    <input class="accordeon__toggler" type="checkbox">
+                    <div class="chekbox"></div>
+                    SeaDoo GTI 155
+                  </label>
+                  <label class="accordeon__label">
+                    <input class="accordeon__toggler" type="checkbox">
+                    <div class="chekbox"></div>
+                    SeaDoo GTR 230
+                  </label>
+                </div>
+                <a class="accordeon__link" href="">Показать еще</a>
+              </div>
+
+            </div>
+            <div class="accordeon">
+              <label class="accordeon__header" for="accordeon5">
+                <img class="accordeon__shevron" src="assets/icons/catalog-arrow-up.svg" alt="">
+                <h3 class="accordeon__heading">Акции</h3>
+              </label>
+              <input class="accordeon__switcher" type="checkbox" id="accordeon5">
+              <div class="accordeon__body accordeon__btns">
+                <label class="accordeon__sale">
+                  <input class="accordeon__sale-btn" type="checkbox">
+                  <div class="accordeon__btn">Sale</div>
+                </label>
+                <label class="accordeon__sale">
+                  <input class="accordeon__sale-btn" type="checkbox">
+                  <div class="accordeon__btn">New</div>
+                </label>
+                <label class="accordeon__sale">
+                  <input class="accordeon__sale-btn" type="checkbox">
+                  <div class="accordeon__btn">Hit</div>
+                </label>
+                <label class="accordeon__sale">
+                  <input class="accordeon__sale-btn" type="checkbox">
+                  <div class="accordeon__btn-diler">Дилер</div>
+                </label>
+              </div>         
+            </div>
+          </div>
+          <div class="catalog-section__list">
+            <div class="product__card">
+              <div class="product__card-sale">sale</div>
+              <img class="product__card-heart" src="assets/icons/product-heart.svg" alt="" />
+              <img class="product__card-img" src="assets/img/jet-1.jpeg" alt="" />
+              <h4 class="product__card-title">
+                Спасательный жилет BRP Men's Airflow PFD
+              </h4>
+              <p class="product__card-price-text">6 900 ₽</p>
+              <div class="product__card-basket">
+                <img class="product__card-basket-img" src="assets/icons/product-basket.svg" alt="" />
+              </div>
+            </div>
+            <div class="product__card">
+              <div class="product__card-sale">sale</div>
+              <img class="product__card-heart" src="assets/icons/product-heart.svg" alt="" />
+              <img class="product__card-img" src="assets/img/jet-2.jpeg" alt="" />
+              <h4 class="product__card-title">
+                Спасательный жилет BRP Men's Airflow PFD
+              </h4>
+              <p class="product__card-price-text">6 900 ₽</p>
+              <div class="product__card-basket">
+                <img class="product__card-basket-img" src="assets/icons/product-basket.svg" alt="" />
+              </div>
+            </div>
+            <div class="product__card">
+              <div class="product__card-sale">sale</div>
+              <img class="product__card-heart" src="assets/icons/product-heart.svg" alt="" />
+              <img class="product__card-img" src="assets/img/jet-3.jpeg" alt="" />
+              <h4 class="product__card-title">
+                Спасательный жилет BRP Men's Airflow PFD
+              </h4>
+              <p class="product__card-price-text">6 900 ₽</p>
+              <div class="product__card-basket">
+                <img class="product__card-basket-img" src="assets/icons/product-basket.svg" alt="" />
+              </div>
+            </div>
+            <div class="product__card">
+              <div class="product__card-sale">sale</div>
+              <img class="product__card-heart" src="assets/icons/product-heart.svg" alt="" />
+              <img class="product__card-img" src="assets/img/jet-4.jpeg" alt="" />
+              <h4 class="product__card-title">
+                Спасательный жилет BRP Men's Airflow PFD
+              </h4>
+              <p class="product__card-price-text">6 900 ₽</p>
+              <div class="product__card-basket">
+                <img class="product__card-basket-img" src="assets/icons/product-basket.svg" alt="" />
+              </div>
+            </div>
+            <div class="product__card">
+              <div class="product__card-sale">sale</div>
+              <img class="product__card-heart" src="assets/icons/product-heart.svg" alt="" />
+              <img class="product__card-img" src="assets/img/jet-5.jpeg" alt="" />
+              <h4 class="product__card-title">
+                Спасательный жилет BRP Men's Airflow PFD
+              </h4>
+              <p class="product__card-price-text">6 900 ₽</p>
+              <div class="product__card-basket">
+                <img class="product__card-basket-img" src="assets/icons/product-basket.svg" alt="" />
+              </div>
+            </div>
+            <div class="product__card">
+              <div class="product__card-sale">sale</div>
+              <img class="product__card-heart" src="assets/icons/product-heart.svg" alt="" />
+              <img class="product__card-img" src="assets/img/jet-6.jpeg" alt="" />
+              <h4 class="product__card-title">
+                Спасательный жилет BRP Men's Airflow PFD
+              </h4>
+              <p class="product__card-price-text">6 900 ₽</p>
+              <div class="product__card-basket">
+                <img class="product__card-basket-img" src="assets/icons/product-basket.svg" alt="" />
+              </div>
+            </div>
+            <div class="product__card">
+              <div class="product__card-sale">sale</div>
+              <img class="product__card-heart" src="assets/icons/product-heart.svg" alt="" />
+              <img class="product__card-img" src="assets/img/jet-7.jpeg" alt="" />
+              <h4 class="product__card-title">
+                Спасательный жилет BRP Men's Airflow PFD
+              </h4>
+              <p class="product__card-price-text">6 900 ₽</p>
+              <div class="product__card-basket">
+                <img class="product__card-basket-img" src="assets/icons/product-basket.svg" alt="" />
+              </div>
+            </div>
+            <div class="product__card">
+              <div class="product__card-sale">sale</div>
+              <img class="product__card-heart" src="assets/icons/product-heart.svg" alt="" />
+              <img class="product__card-img" src="assets/img/jet-8.jpeg" alt="" />
+              <h4 class="product__card-title">
+                Спасательный жилет BRP Men's Airflow PFD
+              </h4>
+              <p class="product__card-price-text">6 900 ₽</p>
+              <div class="product__card-basket">
+                <img class="product__card-basket-img" src="assets/icons/product-basket.svg" alt="" />
+              </div>
+            </div>
+            <div class="product__card">
+              <div class="product__card-sale">sale</div>
+              <img class="product__card-heart" src="assets/icons/product-heart.svg" alt="" />
+              <img class="product__card-img" src="assets/img/jet-9.jpeg" alt="" />
+              <h4 class="product__card-title">
+                Спасательный жилет BRP Men's Airflow PFD
+              </h4>
+              <p class="product__card-price-text">6 900 ₽</p>
+              <div class="product__card-basket">
+                <img class="product__card-basket-img" src="assets/icons/product-basket.svg" alt="" />
+              </div>
+            </div>
+            <div class="product__card">
+              <div class="product__card-sale">sale</div>
+              <img class="product__card-heart" src="assets/icons/product-heart.svg" alt="" />
+              <img class="product__card-img" src="assets/img/jet-10.jpeg" alt="" />
+              <h4 class="product__card-title">
+                Спасательный жилет BRP Men's Airflow PFD
+              </h4>
+              <p class="product__card-price-text">6 900 ₽</p>
+              <div class="product__card-basket">
+                <img class="product__card-basket-img" src="assets/icons/product-basket.svg" alt="" />
+              </div>
+            </div>
+            <div class="product__card">
+              <div class="product__card-sale">sale</div>
+              <img class="product__card-heart" src="assets/icons/product-heart.svg" alt="" />
+              <img class="product__card-img" src="assets/img/jet-11.jpeg" alt="" />
+              <h4 class="product__card-title">
+                Спасательный жилет BRP Men's Airflow PFD
+              </h4>
+              <p class="product__card-price-text">6 900 ₽</p>
+              <div class="product__card-basket">
+                <img class="product__card-basket-img" src="assets/icons/product-basket.svg" alt="" />
+              </div>
+            </div>
+            <div class="product__card">
+              <div class="product__card-sale">sale</div>
+              <img class="product__card-heart" src="assets/icons/product-heart.svg" alt="" />
+              <img class="product__card-img" src="assets/img/jet-12.jpeg" alt="" />
+              <h4 class="product__card-title">
+                Спасательный жилет BRP Men's Airflow PFD
+              </h4>
+              <p class="product__card-price-text">6 900 ₽</p>
+              <div class="product__card-basket">
+                <img class="product__card-basket-img" src="assets/icons/product-basket.svg" alt="" />
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__top">
+      <div class="wrapper footer__top-wrapper">
+        <div class="footer__top-sign">
+          <h3 class="footer__top-sign-title">
+            Подпишитесь на нашу рассылку и узнавайте о акция быстрее
+          </h3>
+          <div class="footer__top-sign-mail">
+            <input class="footer__top-sign-mail-text" type="text" value="Введите ваш e-mail:" />
+            <button class="footer__top-sign-mail-send">Отправить</button>
+          </div>
+        </div>
+        <div class="footer__top-item">
+          <h4 class="footer__top-item-title">Информация</h4>
+          <a class="footer__top-item-link" href="">О компании</a>
+          <a class="footer__top-item-link" href="">Контакты</a>
+          <a class="footer__top-item-link" href="">Акции</a>
+          <a class="footer__top-item-link" href="">Магазины</a>
+        </div>
+        <div class="footer__top-item">
+          <h4 class="footer__top-item-title">Интернет-магазин</h4>
+          <a class="footer__top-item-link" href="">Доставка и самовывоз</a>
+          <a class="footer__top-item-link" href="">Оплата</a>
+          <a class="footer__top-item-link" href="">Возврат-обмен</a>
+          <a class="footer__top-item-link" href="">Новости</a>
+        </div>
+        <div class="footer__top-social">
+          <a class="footer__top-social-link" href=""><img class="footer__top-social-link-img"
+              src="assets/icons/footer-vk.svg" alt="" /></a>
+          <a class="footer__top-social-link" href=""><img class="footer__top-social-link-img"
+              src="assets/icons/footer-yt.svg" alt="" /></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="wrapper footer__bottom-wrapper">
+        <a class="footer__bottom-link" href="">Договор оферты</a>
+        <a class="footer__bottom-link" href="">Политика обработки персональных данных</a>
+      </div>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.min.js"
+    integrity="sha256-Fb0zP4jE3JHqu+IBB9YktLcSjI1Zc6J2b6gTjB0LpoM=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="./swiper.js"></script>
+  <script>
+    $("#slider__box-price").slider({
+      range: true,
+      min: 0,
+      max: 400000,
+      values: ["100", "400000"]
+    })
+  </script>
+</body>
+
+</html>
+
+<!-- //product-card__sale// -->
